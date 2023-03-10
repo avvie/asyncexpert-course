@@ -39,7 +39,6 @@ namespace TaskCombinatorsExercises.Core
                     tasks.Add(httpClient.GetAsync(url, localSource.Token));
                 }
 
-
                 Task<HttpResponseMessage> resultedTask = await Task.WhenAny(tasks);
 
                 if(resultedTask.IsCanceled)
